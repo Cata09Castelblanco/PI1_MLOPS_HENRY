@@ -8,10 +8,10 @@ import os
 # Leer archivos Parquet
 df_gamesf1 = pd.read_parquet(r'DataApi/games_f1.parquet')
 df_itemsf1 = pd.read_parquet(r'DataApi/items_new.parquet')
-df_reviewsf1 = pd.read_parquet(r'DataApi/reviews_parquet')
-df_itemsf2 = pd.read_parquet(r'DataApi/items_f2.parquet')
+df_itemsf2 = pd.read_parquet(r'DataApi/items_reducido.parquet')
 df_games_f3 = pd.read_csv(r'DataApi/df_games.csv')
 df_reviews_f3 = pd.read_csv(r'DataApi/df_reviews.csv')
+df_games_ML = pd.read_csv(r'DataApi/games_ML.csv')
 
 app = FastAPI()
 
@@ -134,3 +134,13 @@ def sentiment_analysis(año: int):
         return sentiment_counts
     else:
         return {"mensaje": "No hay registros para el año especificado"}
+    
+
+def recomendacion_usuario(item_id):
+    # Filtrar el DataFrame por el id especificado
+    df_filtrado = df_games_ML[df_games_ML['id'] == item_id]
+
+    # Obtener la lista de recomendaciones
+    recomendaciones = df_filtrado['recomendaciones']
+
+    return print(*recomendaciones, sep='\n')
