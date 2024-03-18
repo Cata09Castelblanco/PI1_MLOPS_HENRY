@@ -137,10 +137,9 @@ def sentiment_analysis(año: int):
     
 @app.get('/recomendacion_usuario')
 def recomendacion_usuario(item_id):
-    # Filtrar el DataFrame por el id especificado
-    df_filtrado = df_games_ML[df_games_ML['id'] == item_id]
-
-    # Obtener la lista de recomendaciones
-    recomendaciones = df_filtrado['recomendaciones']
-
-    return recomendaciones
+    # Filtrar el DataFrame por el año especificado
+    result_df = df_games_ML[df_games_ML['id'] == item_id]
+    
+    response_data = result_df['recomendaciones']
+ 
+    return response_data
