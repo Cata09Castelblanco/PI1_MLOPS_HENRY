@@ -50,10 +50,8 @@ Para el desarrollo del proyecto contamos con 3 datasets:
 
 <hr>
 
-***<h1 align=center>Etapas</h1>***
-
 <p align="center">
- <img src="images\png pimlops_1_1710719917516.png"  height=400>
+ <img src="images/ETAPAS.png"  height=400>
 </p>
 
 
@@ -130,7 +128,7 @@ Para el despliegue de la API, se optó por la plataforma Render, una nube unific
 1. Seleccionar Render como plataforma de despliegue.
 2. Generar un nuevo servicio en `render.com`.
 3. Conectar el servicio al repositorio actual en GitHub.
-4. Finalmente, el servicio queda corriendo en [pi1-mlops-henry-ncc.onrender.com](https://pi1-mlops-henry-ncc.onrender.com).
+4. Finalmente, el servicio queda corriendo en [pi1-mlops-henry-ncc.onrender.com](https://pi1-mlops-henry-ncc.onrender.com/docs).
 
 El uso de Render facilita el despliegue y la gestión de la API, proporcionando una solución integral y confiable para la implementación de aplicaciones web.
 
