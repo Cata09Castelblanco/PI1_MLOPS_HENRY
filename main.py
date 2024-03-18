@@ -135,11 +135,28 @@ def sentiment_analysis(año: int):
     else:
         return {"mensaje": "No hay registros para el año especificado"}
     
-@app.get('/recomendacion_usuario')
-def recomendacion_usuario(item_id):
+#@app.get('/recomendacion_usuario')
+#def recomendacion_usuario(item_id):
     # Filtrar el DataFrame por el año especificado
-    result_df = df_games_ML[df_games_ML['id'] == item_id]
+   # result_df = df_games_ML[df_games_ML['id'] == item_id]
     
-    response_data = result_df['recomendaciones']
+   # response_data = result_df['recomendaciones']
  
-    return response_data
+   # return response_data
+
+def recomendacion_usuario(item_id: int):
+    # Buscar el juego por su ID
+    juego = df_games_ML[df_games_ML['id'] == item_id]
+    
+    if juego.empty:
+        # Si no se encuentra el juego, devolver un error HTTP 404
+        raise HTTPException(status_code=404, detail=f"No se encontró ningún juego con el ID '{item_id}'.")
+    
+    # Obtener las recomendaciones del juego
+    recomendaciones = juego['recomendaciones'].iloc[0]
+    
+    return {"recomendaciones": recomendaciones}
+
+@app.get("/recommendation/{item_id}")
+async def get_item_recommendations(item_id: int):
+    return recomendacion_usuario(item_id)
