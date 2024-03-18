@@ -134,4 +134,14 @@ El uso de Render facilita el despliegue y la gestión de la API, proporcionando 
 
 `6) Video`
 
-En este [video]() se explica brevemente este proyecto mostrando el funcionamiento de la API.
+En este [video](https://www.youtube.com/watch?v=Y1lCcVUQL-E) se explica brevemente este proyecto mostrando el funcionamiento de la API.
+
+<hr>
+
+***<h1 align=center>Autor</h1>***
+
+***N.Catalina Castelblanco***
+
+Pueden contactarme en [LinkedIn](https://www.linkedin.com/in/catalina-castelblanco/) para más detalles sobre el proyecto o para compartir sugerencias.
+
+¡Gracias por visitar mi perfil!
