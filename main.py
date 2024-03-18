@@ -135,7 +135,7 @@ def sentiment_analysis(año: int):
     else:
         return {"mensaje": "No hay registros para el año especificado"}
     
-
+@app.get('/recomendacion_usuario')
 def recomendacion_usuario(item_id):
     # Filtrar el DataFrame por el id especificado
     df_filtrado = df_games_ML[df_games_ML['id'] == item_id]
