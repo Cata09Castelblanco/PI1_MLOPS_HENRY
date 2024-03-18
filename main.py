@@ -132,7 +132,6 @@ def sentiment_analysis(año: int):
     else:
         return {"mensaje": "No hay registros para el año especificado"}
     
-<<<<<<< HEAD
 def recomendacion_usuario(item_id: int):
     # Buscar el juego por su ID
     juego = df_games_ML[df_games_ML['id'] == item_id]
