@@ -143,4 +143,4 @@ def recomendacion_usuario(item_id):
     # Obtener la lista de recomendaciones
     recomendaciones = df_filtrado['recomendaciones']
 
-    return print(*recomendaciones, sep='\n')
+    return recomendaciones
